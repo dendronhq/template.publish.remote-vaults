@@ -28,7 +28,7 @@
         run: yarn
 
       - name: Initialze workspace
-        run: dendron workspace init
+        run: yarn dendron workspace init
 
       - name: Initialize .next
         run: yarn dendron publish init
