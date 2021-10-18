@@ -5,7 +5,7 @@ vaults:
         fsPath: vault
         remote:
             type: git
-            url: 'git@github.com:dendronhq/template.remote-vault.git'
+            url: 'https://github.com/dendronhq/template.remote-vault.git'
 useFMTitle: true
 useNoteTitleForLink: true
 noAutoCreateOnDefinition: true
