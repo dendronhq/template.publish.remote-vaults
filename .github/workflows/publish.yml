@@ -33,18 +33,8 @@
       - name: Initialize .next
         run: yarn dendron publish init
 
-      - name: Install dependencies
-        run: cd .next && yarn && cd ..
-
       - name: Export notes
-        run: yarn dendron publish build
-
-      - name: Prep notes for publish
-        run: cd .next && yarn export && cd ..
-
-      - name: Update files
-        run: |
-          cd .next && [[ -d ../docs ]] && rm -r ../docs && mv out ../docs && touch ../docs/.nojekyll && cd ..
+        run: dendron publish export --target github
 
       - name: Deploy site
         uses: peaceiris/actions-gh-pages@v3
