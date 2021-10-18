@@ -34,7 +34,7 @@
         run: yarn dendron publish init
 
       - name: Export notes
-        run: dendron publish export --target github
+        run: yarn dendron publish export --target github
 
       - name: Deploy site
         uses: peaceiris/actions-gh-pages@v3
